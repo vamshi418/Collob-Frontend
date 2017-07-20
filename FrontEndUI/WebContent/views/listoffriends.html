@@ -6,7 +6,12 @@
 
 <td ng-hide="currentUser.username==f.toId">{{f.toId}}</td>
 
-<td></td>
+<td   ng-hide="currentUser.username==f.fromId">
+<img src="http://localhost:8081/backend-project2/getimage/{{f.fromId}}" alt="Image Not Available" height="70" width="60px">
+</td>
+<td ng-hide="currentUser.username==f.toId">
+<img src="http://localhost:8081/backend-project2/getimage/{{f.toId}}" alt="Image Not Available" height="70" width="60px">
+</td>
 
 </tr>
 

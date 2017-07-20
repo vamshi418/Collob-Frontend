@@ -48,6 +48,18 @@ app.config(function($routeProvider,$locationProvider){
 		templateUrl:'views/listoffriends.html',
 		controller:'FriendController'
 	})
+	.when('/profilepic',{
+		templateUrl:'views/profilepic.html'
+	})
+	.when('/edituserprofile',{
+		templateUrl:'views/updateprofile.html',
+		controller:'UserController'
+	})
+	.when('/chat',{
+		templateUrl:'views/chat.html',
+		controller:'ChatCtrl'
+	})
+
 	.otherwise({
 		templateUrl:'views/home.html'
 	})

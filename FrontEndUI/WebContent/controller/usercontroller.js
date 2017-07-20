@@ -32,4 +32,20 @@ app.controller('UserController',function(UserService,$scope,$location,$rootScope
             $location.path('/login')
         })
     }
+    $scope.userobj=UserService.getUserByUsername().then(function(response)
+    		{
+    	$scope.userobj=response.data
+    },function(response){
+    	console.log(response.status)
+    })
+    $scope.update=function()
+    {
+    	UserService.updateUserProfile($scope.userobj).then(function(response)
+    			
+    			{
+    		$scope.message="Updated the profile successfully"
+    	},function(response){
+    		console.log(response.data)
+    	})
+    }
 })

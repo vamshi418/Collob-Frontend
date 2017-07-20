@@ -19,7 +19,7 @@ app.factory('FriendService',function($http){
 	}
 	
 	friendService.listOfFriends=function(){
-		return $http.get("http://localhost:8081/backend-project2/listoffriends");
+		return $http.get("http://localhost:8081/backend-project2/listoffriends"); 
 	}
 	
 	return friendService;

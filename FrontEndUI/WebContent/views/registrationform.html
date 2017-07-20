@@ -6,15 +6,17 @@
 </head>
 <body data-ng-controller='UserController'>
 <form>
-Enter Firstname<input type="text" ng-model="user.firstname"><br>
-Enter Lastname<input type="text" ng-model="user.lastname"><br>
-Enter Email<input type="text" ng-model="user.email"><br>
-Enter Username<input type="text" ng-model="user.username"><br>
-Enter Password<input type="password" ng-model="user.password"><br>
-Select Role<input type="radio" ng-model="user.role" value="Student">Student<br>
+<div>
+<tr><td>Enter Firstname</td><td><input type="text" ng-model="user.firstname"><br></td></tr>
+<tr><td>Enter Lastname</td><td><input type="text" ng-model="user.lastname"><br></td></tr>
+<tr><td>Enter Email</td><td><input type="text" ng-model="user.email"><br></td></tr>
+<tr><td>Enter Username</td><td><input type="text" ng-model="user.username"><br></td></tr>
+<tr><td>Enter Password</td><td><input type="password" ng-model="user.password"><br></td></tr>
+<tr><td>Select Role</td><td><input type="radio" ng-model="user.role" value="Student">Student<br></td></tr>
 <input type="radio" ng-model="user.role" value="Alumini">Alumini<br>
 <input type="radio" ng-model="user.role" value="Employee">Employee<br>
 <input type="submit" ng-click="register()"><br>
+</div>
 </form>
 </body>
 </html>
