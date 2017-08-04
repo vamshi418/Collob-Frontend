@@ -1,4 +1,27 @@
-<table>
+<style>
+ body 
+ 	{
+        background-color: #444;
+        background: url(https://acshub.co.uk/hubassets/uploads/2016/09/acs-website-background-building-e1472862899804.jpg);
+    }
+.vertical-offset-100{
+    padding-top:10px;
+}
+</style>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body data-ng-controller='UserController'>
+<div class="container" align="justify">
+		<div class="row vertical-offset-100">
+		    <div class="col-md-6 col-md-offset-14">
+		    	<div class="panel panel-default">
+					<div class="panel-heading">
+				    	<h3 class="panel-title" align="center"><i>List Of Friends</i></h3>
+				 	</div>
+<table align="center">
 
 <tr ng-repeat="f in friendsList">
 
@@ -7,12 +30,19 @@
 <td ng-hide="currentUser.username==f.toId">{{f.toId}}</td>
 
 <td   ng-hide="currentUser.username==f.fromId">
-<img src="http://localhost:8081/backend-project2/getimage/{{f.fromId}}" alt="Image Not Available" height="70" width="60px">
+&nbsp &nbsp &nbsp &nbsp<img src="http://localhost:8081/backend-project2/getimage/{{f.fromId}}" alt="Image Not Available" height="50" width="50px">
 </td>
+
 <td ng-hide="currentUser.username==f.toId">
-<img src="http://localhost:8081/backend-project2/getimage/{{f.toId}}" alt="Image Not Available" height="70" width="60px">
+&nbsp &nbsp &nbsp &nbsp<img src="http://localhost:8081/backend-project2/getimage/{{f.toId}}" alt="Image Not Available" height="50" width="50px">
 </td>
 
 </tr>
 
 </table>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

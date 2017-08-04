@@ -1,5 +1,7 @@
 <div>
-Search <input ng-model="jobTitle">
+Search By Title<input ng-model="searchText.title">
+Search By Author<input ng-model="searchText.author">
+<!-- Search <input ng-model="jobTitle"> -->
 <table class="table">
 <thead>
 <tr>
@@ -7,11 +9,12 @@ Search <input ng-model="jobTitle">
 </tr>
 </thead>
 <tbody>
-<tr ng-repeat="job in jobs | filter:jobTitle">
-<td><a href="" ng-click="getJobDetail(job.id)"></a>{{job.jobTitle}}</td><td>{{job.postedOn | date:'yyyy:MM;dd'}}</td>
+<tr ng-repeat="job in jobs | filter:searchText">
+<td><a href="" ng-click="getJobDetail(job.id)">{{job.jobTitle}}</a></td><td>{{job.postedOn | date:'yyyy:MM;dd'}}</td>
 </tr>
 </tbody>
 </table>
+</div>
 <div ng-show="showdetails">
 <b>Job Details</b>
 <b>Job title : </b>{{job.jobTitle}}<br>
@@ -22,4 +25,15 @@ Search <input ng-model="jobTitle">
 <b>Salary :</b> {{job.salary}}<br>
 <b>company Name :</b> {{job.companyName}}<br>
 </div>
-</div>
+<style>
+ body {
+        background-color: #444;
+        background: url(https://acshub.co.uk/hubassets/uploads/2016/09/acs-website-background-building-e1472862899804.jpg);
+        
+        
+    }
+
+.vertical-offset-100{
+    padding-top:100px;
+}
+</style>
